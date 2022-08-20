@@ -1,0 +1,34 @@
+header{
+    padding: auto;
+    color: darkorange;
+    position: relative;
+    text-align: center;
+    font-size: xx-large;
+    
+}
+body{
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(53779038_410816172799131_3232635464938684416_n.jpg),url(38928905_312832952597454_4774882754061926400_n.jpg);
+    background-repeat: repeat;
+    background-size:contain;
+    background-clip: border-box;
+    
+}
+ul li{
+    opacity: .9;
+    height: auto;
+    width: auto;
+    float: left;
+    text-overflow: clip;
+    text-align: center;
+    list-style: none;
+    line-height: 50px;
+    padding-left: 50px;
+    color: black;
+    background-color: aquamarine;
+    padding-right: 10px;
+}
+a:hover{
+    background-color: gold;
+}

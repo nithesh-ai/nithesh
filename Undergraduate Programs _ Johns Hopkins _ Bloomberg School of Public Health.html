@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs -->
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-b5c98f20e16a3c7b777",applicationID:"534276521"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs">
+<link rel="image_src" href="https://publichealth.jhu.edu/sites/default/files/styles/social_image/public/2021-06/young-woman-reading-book-in-a-library-1248521890.jpg?itok=s7RtqSuT">
+<meta name="description" content="Our Bachelor of Science in Environmental Engineering prepares students to succeed in the private sector, governmental organizations, and top-tier graduate programs.">
+<meta name="keywords" content=",">
+<meta property="fb:app_id" content="833238036762815">
+<meta property="og:site_name" content="Johns Hopkins Bloomberg School of Public Health">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs">
+<meta property="og:title" content="Undergraduate Programs | Johns Hopkins Bloomberg School of Public Health">
+<meta property="og:description" content="Our Bachelor of Science in Environmental Engineering prepares students to succeed in the private sector, governmental organizations, and top-tier graduate programs.">
+<meta property="og:image" content="https://publichealth.jhu.edu/sites/default/files/styles/social_image/public/2021-06/young-woman-reading-book-in-a-library-1248521890.jpg?itok=s7RtqSuT">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="young woman reading book in a library">
+<meta property="og:locale" content="en_US">
+<meta name="facebook-domain-verification" content="8bfvbvpql9k32ygyo1bvy7ttqjn7m8">
+<meta name="google-site-verification" content="RLj5xRys2tqq3XeYsUjqnoRsCAL3EGhE5avLXKk8p0s">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Our Bachelor of Science in Environmental Engineering prepares students to succeed in the private sector, governmental organizations, and top-tier graduate programs.">
+<meta name="twitter:site" content="@JohnsHopkinsSPH">
+<meta name="twitter:title" content="Undergraduate Programs | Johns Hopkins Bloomberg School of Public Health">
+<meta name="twitter:url" content="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs">
+<meta name="twitter:image:alt" content="young woman reading book in a library">
+<meta name="twitter:image:height" content="628">
+<meta name="twitter:image:width" content="1200">
+<meta name="twitter:image" content="https://publichealth.jhu.edu/sites/default/files/styles/social_image/public/2021-06/young-woman-reading-book-in-a-library-1248521890.jpg?itok=s7RtqSuT">
+<meta name="Generator" content="Drupal 9 (Thunder | https://www.thunder.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://publichealth.jhu.edu/themes/custom/jhsph/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="en" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs">
+<script src="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/google_tag.script.js.download" defer=""></script>
+
+    <title>Undergraduate Programs | Johns Hopkins | Bloomberg School of Public Health</title>
+    <link rel="stylesheet" media="all" href="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/css_6tTstUBWV60QhQSka457Lju1Vt_2k3idnD0Rg7koMAs.css">
+<link rel="stylesheet" media="all" href="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/css_MJvyEN_SNnvSd62ouo3OPA1Oaz_hSdGL_MBgSFQx-GI.css">
+<link rel="stylesheet" media="all" href="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/css_NkWZ0idQhxR2g3HGVaoGnsRcq5xatLLSEsLhUKMcuwY.css">
+<link rel="stylesheet" media="screen" href="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/css_Vtl83T7Ki1X_azFjyTAeKBVDrkLC_y3FSseHMm1xLWw.css">
+<link rel="stylesheet" media="print" href="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/print_styles_main-9a7d81ecb64802a9498e76b246a5ffd0.css">
+<link rel="stylesheet" media="all" href="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/print_styles_preloader-3e188f470162563372f3b5c46afcb2fc.css">
+
+    <script src="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/js_QHqjxhGPGgZFwOfW92tmrVpssmC1sbO0zDG4TgLmaEI.js.download"></script>
+
+  </head>
+  <body class="ehe path-node page-node-type-page">
+        <div class="skip-content-container">
+      <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs#main-content" class="skip-to-content visually-hidden focusable">
+        Skip to main content
+      </a>
+    </div>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXTD426" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+
+
+
+<div class="layout-container">
+  
+    
+          <div class="header-ehe">
+        <div class="header-inner">
+          
+  <div id="block-jhusitelogo-2" class="block ehe-logo">
+  
+    
+      <div class="block">
+  
+    
+    <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering" rel="home">
+    <img src="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/ehe-logo.svg" alt="Home">
+
+  </a>
+</div>
+
+  </div>
+<div id="block-environmentalhealthandengineeringheader-2" class="block ehe-text">
+  
+    
+      
+
+            <div class="text-long"><p>A cross-divisional department spanning</p></div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-environmentalhealthandengineering-3-menu" id="block-environmentalhealthandengineering-3" class="ehe-menu">
+            
+  <h2 class="visually-hidden" id="block-environmentalhealthandengineering-3-menu">Environmental Health and Engineering</h2>
+  
+
+        
+
+
+    
+                          
+    
+<ul class="menu">
+            
+<li class="menu__item">
+                <a href="https://publichealth.jhu.edu/" class="menu__link" data-drupal-link-system-path="&lt;front&gt;">Bloomberg School of Public Health</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://engineering.jhu.edu/" class="menu__link">Whiting School of Engineering</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/apply" class="btn-apply menu__link">Apply</a>
+          </li>
+      </ul>
+  
+
+  </nav>
+
+
+        </div>
+      </div>
+    
+    
+        
+    
+    
+    
+    <div class="main">
+    <a id="main-content" tabindex="-1"></a>        <main role="main" class="main-content">
+          
+  <div data-drupal-messages-fallback="" class="hidden"></div><div id="block-jhsph-content" class="block">
+  
+    
+      
+<article role="article" class="node node--type-page node--view-mode-full">
+
+  <div>
+
+    
+
+            <div class="field field-header-paragraph field-item">
+<div class="header" style="background-color: ;">
+
+  
+
+
+            <article>
+  
+      
+            <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--header">
+
+
+
+                  <div class="media media--blazy b-lazy b-bg media--background media--bundle--bg-image media--loading is-b-loading media--responsive media--image" data-src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%202000%20680&#39;%2F%3E" data-backgrounds="{&quot;500&quot;:{&quot;src&quot;:&quot;\/sites\/default\/files\/styles\/header_small\/public\/2021-06\/young-woman-reading-book-in-a-library-1248521890.jpg?h=4f96ef22\u0026itok=QCDIvNW7&quot;,&quot;ratio&quot;:136},&quot;1000&quot;:{&quot;src&quot;:&quot;\/sites\/default\/files\/styles\/header_large\/public\/2021-06\/young-woman-reading-book-in-a-library-1248521890.jpg?h=4f96ef22\u0026itok=PX1Lkz0_&quot;,&quot;ratio&quot;:68},&quot;2000&quot;:{&quot;src&quot;:&quot;\/sites\/default\/files\/styles\/header_xl\/public\/2021-06\/young-woman-reading-book-in-a-library-1248521890.jpg?h=4f96ef22\u0026itok=39_Hd8V9&quot;,&quot;ratio&quot;:34}}" data-dimensions="{&quot;500&quot;:136,&quot;1000&quot;:68,&quot;2000&quot;:34}">        </div>
+        
+  
+</div>
+      
+  </article>
+
+      
+
+  <div class="header_inner inner low text-light
+              text-background">
+
+    <div class="header__text">
+
+        <div class="header__text-inner">
+
+                      <div class="header__subtitle">
+              Programs
+            </div>
+          
+          <h1 class="header__title">
+            
+            <div>Undergraduate Programs</div>
+      
+          </h1>
+
+          <div class="header__description">
+            
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+      
+
+          <div class="subnav-region">
+        <div class="skip-subnav">
+          <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs#page-content" class="visually-hidden focusable">
+            Skip Section Navigation
+          </a>
+        </div>
+        <div id="block-mainnavigation-3" class="block subnav-superfish">
+  
+    
+      
+<ul id="superfish-main" class="menu sf-menu sf-main sf-vertical sf-style-none">
+  
+<li id="main-menu-link-contentf07e33e1-4d4a-4d49-a3df-2cc111111074" class="sf-depth-3 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about" class="sf-depth-3 menuparent">About</a><ul><li id="main-menu-link-content6dbf9e9c-6267-4311-a866-3daa680b3205" class="sf-depth-4 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/community-outreach-and-engagement" class="sf-depth-4 menuparent">Community Outreach and Engagement</a><ul><li id="main-menu-link-content4530574b-dbe0-439c-b6ba-3524e3a0432e" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/community-outreach-and-engagement/baltimore-community-outreach-and-engagement-projects" class="sf-depth-5">Baltimore Community Outreach and Engagement Projects</a></li><li id="main-menu-link-content606c8321-5590-40f1-bab8-20eb213a1936" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/community-outreach-and-engagement/day-at-the-market" class="sf-depth-5">Day At The Market</a></li><li id="main-menu-link-contentd21f16c5-21ed-4cd0-bfe4-930348976874" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/community-outreach-and-engagement/evaluating-the-impacts-of-energy-options-on-baltimores-air-quality" class="sf-depth-5">Evaluating the Impacts of Energy Options on Baltimore’s Air Quality</a></li><li id="main-menu-link-content0a92c86e-5209-4bba-ace3-c3f6f177c0b2" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/community-outreach-and-engagement/one-health-and-asthma-prevention-in-baltimore" class="sf-depth-5">One Health and Asthma Prevention in Baltimore</a></li><li id="main-menu-link-content490d42df-2b67-4771-a40c-cff4454316c0" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/community-outreach-and-engagement/safer-urban-agriculture-in-baltimore" class="sf-depth-5">Safer Urban Agriculture in Baltimore</a></li></ul></li><li id="main-menu-link-contentfc86b148-9919-4010-8cff-2ff006eb1e59" class="sf-depth-4 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives" class="sf-depth-4 menuparent">Diversity and Equity Initiatives</a><ul><li id="main-menu-link-content1e386483-1b10-4dd5-90a4-2b52f117f0f2" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/definitions" class="sf-depth-5">Definitions</a></li><li id="main-menu-link-contente190ea9a-def9-4881-b610-cff4a55e2f71" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/indigenous-peoples" class="sf-depth-5">Indigenous Peoples</a></li><li id="main-menu-link-content13804d83-ca6b-45f7-9ed5-c5c219155258" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/lectures-events-and-seminars" class="sf-depth-5">Lectures, Events, and Seminars</a></li><li id="main-menu-link-content5cd83d21-3548-49bf-9193-220b1d1e8e0c" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources" class="sf-depth-5 menuparent">Resources</a><ul><li id="main-menu-link-contentcfc3ab0e-307c-4fbe-a5f8-0c25a0ff7307" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources/additional-resources-and-blogs" class="sf-depth-6">Additional Resources and Blogs</a></li><li id="main-menu-link-content0e88df8a-dc8e-4bab-bc8e-4fec3192b182" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources/articles-and-opinions" class="sf-depth-6">Articles and Opinions</a></li><li id="main-menu-link-content6e01ce8e-e393-49d5-acf0-08003ea12588" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources/publications-reports-and-studies" class="sf-depth-6">Publications, Reports, and Studies</a></li><li id="main-menu-link-content04dc7a6e-3fc1-4241-bc87-aef4612f25c3" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources/resources-for-children" class="sf-depth-6">Resources for Children</a></li><li id="main-menu-link-content64b5390d-296b-4911-988a-bebc78e0d7b2" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources/videos-and-podcasts" class="sf-depth-6">Videos and Podcasts</a></li><li id="main-menu-link-contenta3a44858-9b21-4a72-9fa0-95d5aaa08880" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/diversity-and-equity-initiatives/resources/websites-books-and-essays" class="sf-depth-6">Websites, Books, and Essays</a></li></ul></li></ul></li><li id="main-menu-link-content2952cb6a-e800-4d3c-a0c4-08ffb761434b" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/environmental-health-and-engineering-student-organization-eheso" class="sf-depth-4">Environmental Health and Engineering Student Organization (EHESO)</a></li><li id="main-menu-link-content831c5f70-96b3-480c-96c2-9a9e1dd19590" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/giving" class="sf-depth-4">Giving</a></li><li id="main-menu-link-content29a2d5b0-0ef3-41c1-8c87-718be6ded68f" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/message-from-the-chair" class="sf-depth-4">Message from the Chair</a></li><li id="main-menu-link-content79a854f0-923c-43e3-a4a0-5eb0c47da991" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/about/job-openings" class="sf-depth-4">Job Openings</a></li></ul></li><li id="main-menu-link-content1af869dc-b13c-4aa5-826f-c4117ce0e785" class="active-trail sf-depth-3 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs" class="sf-depth-3 menuparent">Programs</a><ul><li id="main-menu-link-contentf781ad10-dbed-4c43-bd9e-0774b13bed78" class="active-trail sf-depth-4 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs" class="is-active sf-depth-4 menuparent">Undergraduate Programs</a><ul><li id="main-menu-link-content58bb52d5-2be4-445d-8719-be4d91e72a71" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/bachelor-of-science-in-environmental-engineering" class="sf-depth-5">Bachelor of Science in Environmental Engineering</a></li><li id="main-menu-link-contentd3084d1a-8470-482d-8f2e-44b54dc02b8b" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/program-objectives-and-outcomes" class="sf-depth-5">Program Objectives and Outcomes</a></li><li id="main-menu-link-content2b2314a1-e66e-4cbc-b31e-affe7c66a7eb" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/why-hopkins" class="sf-depth-5">Why Hopkins?</a></li></ul></li><li id="main-menu-link-content2afd5e00-2091-4e1c-b84d-5f735f1847e4" class="sf-depth-4 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs" class="sf-depth-4 menuparent">Graduate Programs</a><ul><li id="main-menu-link-content73a81eea-f5b8-4620-a866-2b1d5584a6b3" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/application-fee-waiver-requirements" class="sf-depth-5">Application Fee Waiver Requirements</a></li><li id="main-menu-link-contente9445a3d-50d8-4132-ad7e-2e4f7bfaeeb9" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/areas-of-focus" class="sf-depth-5">Areas of Focus</a></li><li id="main-menu-link-contentc5ccb483-0338-46da-b3bb-310787e263dd" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/graduate-student-resources" class="sf-depth-5">Graduate Student Resources</a></li><li id="main-menu-link-content9451ee63-719c-4460-bf0e-7eb2d4612b62" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/jensen-fellowship" class="sf-depth-5">Jensen Fellowship</a></li><li id="main-menu-link-contenta02be7b7-e674-474e-a80e-0b130997554a" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/postdoctoral-opportunitites" class="sf-depth-5 menuparent">Postdoctoral Opportunitites</a><ul><li id="main-menu-link-contentf0e1dcb7-931f-461e-b0a9-1f21a9ba8da5" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/postdoctoral-opportunitites/environmental-epidemiology-postdoctoral-fellowship-opportunity" class="sf-depth-6">Environmental Epidemiology Postdoctoral Fellowship Opportunity</a></li><li id="main-menu-link-content6d7a6668-102e-4765-be58-3c39cbcbb8cb" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/postdoctoral-opportunitites/postdoctoral-opportunity-toxicology-policy-law-and-regulatory-analysis" class="sf-depth-6">Postdoctoral Opportunity: Toxicology Policy, Law and Regulatory Analysis</a></li></ul></li><li id="main-menu-link-contentf1546e0f-ec76-4ec0-adef-4c9c3f560cbd" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/graduate-programs/quotes-from-our-ehe-alumni" class="sf-depth-5">Quotes from our EHE Alumni</a></li></ul></li><li id="main-menu-link-contentd2d8d018-e4f2-4f0c-b08b-84d812fe0649" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/non-degree-programs" class="sf-depth-4">Non-Degree Programs</a></li><li id="main-menu-link-content40ca66a3-b066-4066-915a-c78bd0d151f8" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/apply" class="sf-depth-4">Apply</a></li></ul></li><li id="main-menu-link-content57edb858-4b67-4f6b-95ec-c25f274564ca" class="sf-depth-3 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice" class="sf-depth-3 menuparent">Research and Practice</a><ul><li id="main-menu-link-contente75ab2bc-09a8-4c67-8951-47daef75add1" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research" class="sf-depth-5 menuparent">Dr. Kirsten Koehler Faculty Research</a><ul><li id="main-menu-link-content20efad3e-7f46-4aef-a1a0-e30b7cd9dfa4" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/aerosol-samplers" class="sf-depth-6">Aerosol Samplers</a></li><li id="main-menu-link-content7fd0e56f-db6d-4f8e-b64b-aaa7e0138c2b" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/baltimore-healthy-schools-impact-of-indoor-air-quality-on-health-and-performance" class="sf-depth-6">Baltimore Healthy Schools: Impact of Indoor Air Quality on Health and Performance</a></li><li id="main-menu-link-contentf0842733-08d8-478b-8d63-3d478c87f237" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/exposures-from-oil-spills" class="sf-depth-6">Exposures from Oil Spills</a></li><li id="main-menu-link-content3d20d280-e196-435f-94cd-7e712fcf4293" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/kirsten-koehlers-research-team" class="sf-depth-6">Kirsten Koehler's Research Team</a></li><li id="main-menu-link-content29fd35f3-7759-4abc-a96e-3e008ece5f10" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/occupational-hazard-mapping" class="sf-depth-6">Occupational Hazard Mapping</a></li><li id="main-menu-link-contentb7f1fb9c-372b-4c41-bcb4-f0214edd2ea8" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/particulate-exposures-in-asthmatic-kids-peak" class="sf-depth-6">Particulate Exposures in Asthmatic Kids (PEAK)</a></li><li id="main-menu-link-contentfc7b87fd-5342-447b-9230-a3d4cba09856" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/personal-exposure-assessment" class="sf-depth-6">Personal Exposure Assessment</a></li><li id="main-menu-link-content0886e797-f70e-4d7f-a477-86be12fde637" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/publications" class="sf-depth-6">Publications</a></li><li id="main-menu-link-content69cbd844-3bbf-471f-939f-a0acb7fadf79" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/spatiotemporal-exposure-assessment" class="sf-depth-6">Spatiotemporal Exposure Assessment</a></li><li id="main-menu-link-content8b67cdee-355f-476b-8f56-356cd1c7957a" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/dr-kirsten-koehler-faculty-research/within-baltimore-variability-in-pollution" class="sf-depth-6">Within Baltimore Variability in Pollution</a></li></ul></li><li id="main-menu-link-content596a709f-9821-4aa8-9b6a-4be42a449d63" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling" class="sf-depth-5 menuparent">Kohr Laboratory of Cardiovascular Redox Signaling</a><ul><li id="main-menu-link-contentcaa424fe-3b08-4faa-9646-3c3d23a95891" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/current-funding" class="sf-depth-6">Current Funding</a></li><li id="main-menu-link-content79231709-a111-4155-85a3-421da81ef4f7" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/honors-and-awards" class="sf-depth-6">Honors and Awards</a></li><li id="main-menu-link-content2fca3d50-2194-4b58-8308-6a9547e2946a" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/impact-of-arsenic-on-myocardial-ischemic-injury" class="sf-depth-6">Impact of Arsenic on Myocardial Ischemic Injury</a></li><li id="main-menu-link-contentf25c6e68-a0ff-477f-abd0-9a529b453943" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/meet-our-team" class="sf-depth-6">Meet Our Team...</a></li><li id="main-menu-link-contentd04a5875-8dc2-46fb-a39b-68c3cb0b036e" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/postdoctoral-fellowship-opportunity" class="sf-depth-6">Postdoctoral Fellowship Opportunity</a></li><li id="main-menu-link-content4b196cc6-ba53-4ecd-ac43-82978ff5436c" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/proteomic-methodologies-to-assess-modifications" class="sf-depth-6">Proteomic Methodologies to Assess Modifications</a></li><li id="main-menu-link-contentee7061df-9455-4437-a826-d52319b7f5e6" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/publications" class="sf-depth-6">Publications</a></li><li id="main-menu-link-contentb5ae786e-723d-4dcb-a4ea-f9b95d547aed" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/role-for-trim72-in-cardioprotection" class="sf-depth-6">Role for TRIM72 in Cardioprotection</a></li><li id="main-menu-link-contentd27ddadc-17f9-4462-b3ff-cd0d1ee4710c" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/kohr-laboratory-of-cardiovascular-redox-signaling/sex-dependent-s-nitrosothiol-signaling" class="sf-depth-6">Sex-dependent S-nitrosothiol Signaling</a></li></ul></li><li id="main-menu-link-contenta36b2a74-5c4a-497c-9d61-1f5f2d55d5e3" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/mitzner-laboratory" class="sf-depth-5 menuparent">Mitzner Laboratory</a><ul><li id="main-menu-link-contentc329f8eb-032a-4681-a296-39b414882c1e" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/mitzner-laboratory/publications" class="sf-depth-6">Publications</a></li><li id="main-menu-link-content99ac6dea-b3b9-42ae-ad44-2797ffd00f70" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/mitzner-laboratory/research-team" class="sf-depth-6">Research Team</a></li></ul></li><li id="main-menu-link-content1447766e-0160-463f-a7d6-d09b4f83395b" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university" class="sf-depth-5 menuparent">One Health Laboratory at Johns Hopkins University</a><ul><li id="main-menu-link-content1fd2bf76-629a-4e1a-a630-e20374cff50d" class="sf-depth-6 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/animal-visitation-chlorhexidine-trial" class="sf-depth-6 menuparent">Animal Visitation Chlorhexidine Trial</a><ul><li id="main-menu-link-content89d964e0-55d9-4bd3-9785-8a152b206571" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/animal-visitation-chlorhexidine-trial/for-dog-handler-teams" class="sf-depth-7">For Dog Handler Teams</a></li><li id="main-menu-link-content70694ccd-ecfe-4193-9e51-929699d2510d" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/animal-visitation-chlorhexidine-trial/for-parentsguardians" class="sf-depth-7">For Parents/Guardians</a></li></ul></li><li id="main-menu-link-content3ef47d47-e529-4cb6-8db4-402533a855cd" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/baltimore-healthy-schools-impact-of-indoor-air-quality-on-health-and-performance" class="sf-depth-6">Baltimore Healthy Schools: Impact of Indoor Air Quality on Health and Performance</a></li><li id="main-menu-link-contente848e464-e71d-41fe-9a40-adc40b8a9da7" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/collaborators" class="sf-depth-6">Collaborators</a></li><li id="main-menu-link-content2dcdb7be-0b69-42f1-9098-2cfc51ff6ab3" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/dr-meghan-davis-receives-canine-health-foundation-grant-to-study-the-health-of-dogs" class="sf-depth-6">Dr. Meghan Davis Receives Canine Health Foundation Grant to Study the Health of Dogs</a></li><li id="main-menu-link-contentd4aba834-e772-4c0d-a638-6a310a0b957f" class="sf-depth-6 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/group-on-the-integration-of-the-relationship-between-animals-public-health-and-ethics" class="sf-depth-6 menuparent">Group on the Integration of the Relationship between Animals, Public Health and Ethics</a><ul><li id="main-menu-link-content1e18d76e-77ff-45d8-9e0b-4bd48ce656f0" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/group-on-the-integration-of-the-relationship-between-animals-public-health-and-ethics/giraphe-activities" class="sf-depth-7">GIRAPHE Activities</a></li><li id="main-menu-link-contentea6821fe-ca91-4d1e-9d85-0f6ff10d9b24" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/group-on-the-integration-of-the-relationship-between-animals-public-health-and-ethics/giraphe-core-faculty" class="sf-depth-7">GIRAPHE Core Faculty</a></li><li id="main-menu-link-content49f4a3de-8723-4ef6-b7ae-a4ed0d1fad07" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/group-on-the-integration-of-the-relationship-between-animals-public-health-and-ethics/summit-on-animals" class="sf-depth-7">Summit on Animals, Public Health &amp; Ethics Webcast</a></li></ul></li><li id="main-menu-link-content81b8fc89-55ef-40cc-a13f-96427e093880" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/news-and-publications" class="sf-depth-6">News and Publications</a></li><li id="main-menu-link-content0349c236-b496-4ea7-89d9-89cb1be227bc" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/one-health-research-team" class="sf-depth-6">One Health Research Team</a></li><li id="main-menu-link-content9989ec6a-c372-4bc6-b6ee-aa2b3a593e13" class="sf-depth-6 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/the-covet-study" class="sf-depth-6 menuparent">The COVET Study</a><ul><li id="main-menu-link-content70f78be1-b466-4af0-bdbd-d86ba1543cc5" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/the-covet-study/the-covet-study-research-goals" class="sf-depth-7">The COVET Study Research Goals</a></li><li id="main-menu-link-contentbace0e12-69d9-4db6-bf40-ec78dd095a0f" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/the-covet-study/the-covet-study-research-team" class="sf-depth-7">The COVET Study Research Team</a></li></ul></li><li id="main-menu-link-contentd289ca67-1729-441b-a613-752ce4536d09" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/the-cowelf-study" class="sf-depth-6">The CoWelf Study</a></li><li id="main-menu-link-contentd0a63d9d-682d-4aa7-8989-ef0709c0bfba" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/one-health-laboratory-at-johns-hopkins-university/covid-19-human-animal-interactions-survey-chais" class="sf-depth-6">COVID-19 Human-Animal Interactions Survey (CHAIS)</a></li></ul></li><li id="main-menu-link-content19f571d4-d3b1-4782-ada1-f73e3bcd371e" class="sf-depth-4 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas" class="sf-depth-4 menuparent">Research Areas</a><ul><li id="main-menu-link-content9e5ab11d-b5bb-4d3e-8ff9-a4ca618fd54a" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/air-pollution-and-cardiorespiratory-diseases" class="sf-depth-5">Air Pollution and Cardiorespiratory Diseases</a></li><li id="main-menu-link-content9b5d16d6-fa3f-46ef-b631-a8b3e6df4587" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/antimicrobial-resistance-and-infectious-disease" class="sf-depth-5">Antimicrobial Resistance and Infectious Disease</a></li><li id="main-menu-link-contentd178c0c0-d8e0-4e8f-8de5-02d6dc933305" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/biosecurity-and-emerging-threats" class="sf-depth-5">Biosecurity and Emerging Threats</a></li><li id="main-menu-link-contentb9954867-4d84-4f07-b8d2-ce3e7f652297" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/covid-19-research" class="sf-depth-5">COVID-19 Research</a></li><li id="main-menu-link-contentc67c08ba-1394-45ff-95ae-670b4a8526f1" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/carcinogens-and-cancer" class="sf-depth-5">Carcinogens and Cancer</a></li><li id="main-menu-link-content26bc358c-0fa1-43b8-aa19-144e93813455" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/childrens-environmental-health" class="sf-depth-5">Children's Environmental Health</a></li><li id="main-menu-link-contente6a3a5f0-65d1-4e5d-b57d-41fb4868894a" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/chronic-disease-etiology-and-prevention" class="sf-depth-5">Chronic Disease Etiology and Prevention</a></li><li id="main-menu-link-content74d11e82-129c-473c-84a9-cabc9fc82093" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/community-sustainability-resilience-and-preparedness" class="sf-depth-5">Community Sustainability, Resilience, and Preparedness</a></li><li id="main-menu-link-contentc2e83517-21d5-4c7b-b4d1-85091e3849d1" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/consumer-product-safety" class="sf-depth-5">Consumer Product Safety</a></li><li id="main-menu-link-contenteeb50598-a7e3-46be-92d4-5907215835a0" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/energy-management-and-alternative-technologies" class="sf-depth-5">Energy Management and Alternative Technologies</a></li><li id="main-menu-link-content18182395-daab-4328-9cc0-427b2badeb72" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/environmental-chemistry-microbiology-and-ecology" class="sf-depth-5">Environmental Chemistry, Microbiology and Ecology</a></li><li id="main-menu-link-contente702ae15-708b-4948-965b-4ef5c045dcff" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/environmental-engineering" class="sf-depth-5">Environmental Engineering</a></li><li id="main-menu-link-content73eab35d-839e-4576-879a-f2fdd1b7cd96" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/environmental-epidemiology" class="sf-depth-5">Environmental Epidemiology</a></li><li id="main-menu-link-content907d4937-dbed-4c0c-a89b-7320b8237226" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/environmental-inequities-and-injustice" class="sf-depth-5">Environmental Inequities and Injustice</a></li><li id="main-menu-link-contentefd1e76a-acd2-42b5-a037-bb346adaa622" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/environmental-resource-quality" class="sf-depth-5">Environmental Resource Quality</a></li><li id="main-menu-link-content634bca2a-93b3-4928-85bf-f2e5c2885dbe" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/epigenetic-regulation-in-environmental-diseases" class="sf-depth-5">Epigenetic Regulation in Environmental Diseases</a></li><li id="main-menu-link-contentf1e0ceed-3c8e-409e-aac0-1df7b0add147" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/food-and-agricultural-systems" class="sf-depth-5">Food and Agricultural Systems</a></li><li id="main-menu-link-content960e8e3f-62e1-4247-8252-b7096d25bb91" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/geomorphology-geochemistry-and-hydrology" class="sf-depth-5">Geomorphology, Geochemistry, and Hydrology</a></li><li id="main-menu-link-content1a5525fb-f6c0-4706-98fb-1e39e9136796" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change" class="sf-depth-5 menuparent">Global Environmental Change</a><ul><li id="main-menu-link-contentc770d5c4-5678-4333-84ab-0ea5672b693a" class="sf-depth-6 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health" class="sf-depth-6 menuparent">Program on Global Sustainability and Health</a><ul><li id="main-menu-link-contentb97793c7-a4b1-43c1-81bc-fa30ae442c55" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/about-the-program" class="sf-depth-7">About the Program</a></li><li id="main-menu-link-contente0b514dd-cb21-4fe8-a983-6cb508dbefee" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/conceptual-framework" class="sf-depth-7">Conceptual Framework</a></li><li id="main-menu-link-content24c9afac-f947-49ef-93d3-a8fd2b7e4831" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/land-use-and-energy-issues" class="sf-depth-7">Land Use and Energy Issues</a></li><li id="main-menu-link-content07975d3e-22ef-4fc2-b4b8-fa2a48bfc8f3" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/mph-concentration-in-global-environmental-sustainability-and-health" class="sf-depth-7">MPH Concentration in Global Environmental Sustainability &amp; Health</a></li><li id="main-menu-link-contentff21df88-e305-4848-898e-b5a1f0a596a3" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/projects-and-research" class="sf-depth-7">Projects and Research</a></li><li id="main-menu-link-contentbbb15cab-cc8d-4b22-8676-88d7898574ac" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/recommended-reading" class="sf-depth-7">Recommended Reading</a></li><li id="main-menu-link-contenta2ead650-ca42-46dd-ba30-74b18e39e2e2" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/research-on-land-use-and-public-health" class="sf-depth-7">Research on Land Use and Public Health</a></li><li id="main-menu-link-content5feee692-e2fc-4745-b089-04e6252058a0" class="sf-depth-7 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/global-environmental-change/program-on-global-sustainability-and-health/what-the-future-must-look-like" class="sf-depth-7">What the Future Must Look Like</a></li></ul></li></ul></li><li id="main-menu-link-contenta43fc540-ecf9-45e8-81e5-c1723f6b43df" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/novel-exposure-assessment" class="sf-depth-5">Novel Exposure Assessment</a></li><li id="main-menu-link-content7ebd3544-e76b-4d18-86f4-bc9584d88c99" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/risk-sciences-and-public-policy" class="sf-depth-5">Risk Sciences and Public Policy</a></li><li id="main-menu-link-content6904dad6-9b0f-4755-bcb4-d8c881439ea2" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/social-and-behavioral-sciences" class="sf-depth-5">Social and Behavioral Sciences</a></li><li id="main-menu-link-content4e1f9ae0-0111-4275-af31-d8d7a524b8d7" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/toxicology-physiology-cell-biology" class="sf-depth-5">Toxicology, Physiology, &amp; Cell Biology</a></li><li id="main-menu-link-contentbf496a60-1123-4641-aad2-256e3f91d9e6" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/water-sanitation-hygiene-and-health" class="sf-depth-5 menuparent">Water, Sanitation, Hygiene, and Health</a><ul><li id="main-menu-link-content27a5e853-c12d-4474-8277-4cdf64cf09d4" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/water-sanitation-hygiene-and-health/johns-hopkins-university-water-center" class="sf-depth-6">Johns Hopkins University Water Institute</a></li></ul></li><li id="main-menu-link-content939e2be4-62c4-4c43-979d-81876c74914d" class="sf-depth-5 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/research-areas/worker-health-and-safety" class="sf-depth-5">Worker Health and Safety</a></li></ul></li><li id="main-menu-link-contentb751e86d-145a-4d33-8139-ce1d5d5d62c9" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd" class="sf-depth-5 menuparent">Research Program Gurumurthy Ramachandran, PhD</a><ul><li id="main-menu-link-content50f66bd5-0947-4f69-8ca5-a4bd7dcd11fa" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/climate-change-pesticide-use-and-exposures" class="sf-depth-6">Climate Change, Pesticide Use, and Exposures</a></li><li id="main-menu-link-content81c05bea-00b0-4403-bfea-1c3e7efb11d6" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/computed-tomography-and-low-cost-sensor-networks-to-reconstruct-spatial-pollutant-distributions" class="sf-depth-6">Computed Tomography and Low-cost Sensor Networks to Reconstruct Spatial Pollutant Distributions</a></li><li id="main-menu-link-contentb28ccd68-c5e5-4bb4-9979-81e4c9ee1a99" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/decision-making-for-risk-management-using-small-data-sets-mathematical-models-and-heuristics" class="sf-depth-6">Decision-making for Risk Management Using Small Data Sets, Mathematical Models, and Heuristics</a></li><li id="main-menu-link-content6336136d-3bd1-4b52-b907-a2238e44a397" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/infrastructure-for-delivering-and-characterizing-airborne-exposures-in-exposure-chambers" class="sf-depth-6">Infrastructure for Delivering and Characterizing Airborne Exposures in Exposure Chambers</a></li><li id="main-menu-link-content1e7960b4-5e09-47c1-b1fc-42c8efd561e4" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/mathematical-modeling-of-chemical-exposures" class="sf-depth-6">Mathematical Modeling of Chemical Exposures</a></li><li id="main-menu-link-contentce6376b9-6e8a-4c58-ad3a-b58707d1d0af" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/meet-rams-team" class="sf-depth-6">Meet Ram's Team...</a></li><li id="main-menu-link-content1078c3fb-326f-45d5-9900-fb65ee8077f1" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/research-program-gurumurthy-ramachandran-phd/modeling-of-infectious-diseases" class="sf-depth-6">Modeling of Infectious Diseases</a></li></ul></li><li id="main-menu-link-content72d8ef5f-7887-4594-aaf1-766705419f04" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/teaching-and-research-labs-at-wse" class="sf-depth-4">Teaching and Research Labs at WSE</a></li><li id="main-menu-link-content9d2f148c-4394-44d7-8220-ce2652611bca" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-buckley-research-group" class="sf-depth-5 menuparent">The Buckley Research Group</a><ul><li id="main-menu-link-contentf7f0dbc4-a81b-4680-b39e-b6ce0c6199b8" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-buckley-research-group/research-team" class="sf-depth-6">Research Team</a></li><li id="main-menu-link-contenta13686cc-1539-4f48-be70-58d51d49078e" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-buckley-research-group/select-publications" class="sf-depth-6">Select Publications</a></li></ul></li><li id="main-menu-link-content73c72ee7-638a-4be9-a577-9261039bfb33" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university" class="sf-depth-5 menuparent">The Exposome Collaborative @ Johns Hopkins University</a><ul><li id="main-menu-link-content4c5e7310-9555-437d-9142-d6039c21c224" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university/exposome-collaborative-investigators" class="sf-depth-6">Exposome Collaborative Investigators</a></li><li id="main-menu-link-content9d14a2e0-379e-46c9-a02d-2258e6fa5f15" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university/exposome-projects" class="sf-depth-6">Exposome Projects</a></li><li id="main-menu-link-contente8b63ef5-ed5e-4c21-8e90-507682bd9f75" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university/exposome-resources" class="sf-depth-6">Exposome Resources</a></li><li id="main-menu-link-content60afac03-7c7f-4369-9443-27a3dda59535" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university/the-exposome-collaborative-johns-hopkins-university" class="sf-depth-6">The Exposome Collaborative @ Johns Hopkins University</a></li><li id="main-menu-link-content83e68a51-b2a5-426d-b900-86cd7f7b9931" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university/the-exposome-collaborative-background" class="sf-depth-6">The Exposome Collaborative Background</a></li><li id="main-menu-link-contentbf810394-ccf7-4ad4-a394-763e04614e16" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-exposome-collaborative-johns-hopkins-university/the-exposome-collaborative-events-and-activities" class="sf-depth-6">The Exposome Collaborative Events and Activities</a></li></ul></li><li id="main-menu-link-content1826cb94-bc3f-47bb-a986-626f9757a512" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-johns-hopkins-environmental-health-microbiology-and-immunology-laboratory" class="sf-depth-5 menuparent">The Johns Hopkins Environmental Health Microbiology and Immunology Laboratory</a><ul><li id="main-menu-link-content753c1e0b-c9d9-4cd7-a811-389a92ff6bfc" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-johns-hopkins-environmental-health-microbiology-and-immunology-laboratory/arsenic-and-other-metals-association-with-cytokine-dysregulation-and-risk-of" class="sf-depth-6">Arsenic and other metals: association with cytokine dysregulation and risk of Hepatitis E infection in pregnant women</a></li><li id="main-menu-link-content0e800f53-9758-43e9-b4d5-95a7b295ed8a" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-johns-hopkins-environmental-health-microbiology-and-immunology-laboratory/news-and-publications" class="sf-depth-6">News and Publications</a></li><li id="main-menu-link-contentf2839971-6160-4fd6-bc9a-1e2c0c6d87de" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-johns-hopkins-environmental-health-microbiology-and-immunology-laboratory/research-team" class="sf-depth-6">Research Team</a></li></ul></li><li id="main-menu-link-content18c6d863-5f29-46af-843d-dd2ca62b5867" class="sf-depth-5 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes" class="sf-depth-5 menuparent">The Wang Laboratory of Human Environmental Epigenomes</a><ul><li id="main-menu-link-contentb3dd4ef0-8ac9-4cff-b6df-e40fd2da29dc" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/alumni" class="sf-depth-6">Alumni</a></li><li id="main-menu-link-content29acf951-83ee-4a1a-a30e-e277d5fc9dde" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/honors-and-awards" class="sf-depth-6">Honors and Awards</a></li><li id="main-menu-link-contentc33fbafc-184b-4dd2-bed4-fbbe47a1429a" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/lab-members" class="sf-depth-6">Lab Members</a></li><li id="main-menu-link-content0be4eeb0-811d-4283-86b6-8a3e2baf97e6" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/mascot" class="sf-depth-6">Mascot</a></li><li id="main-menu-link-content17bc11a9-fbc5-4ad6-91fa-0a544898347d" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/opportunities" class="sf-depth-6">Opportunities</a></li><li id="main-menu-link-contenta344442b-dfbf-4f17-96a3-107902a12e12" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/postdoctoral-fellow-and-visiting-scholar-positions-johns-hopkins-university" class="sf-depth-6">Postdoctoral Fellow and Visiting Scholar Positions Johns Hopkins University</a></li><li id="main-menu-link-content8d0b7397-26e0-4889-add4-479d5e2d0e80" class="sf-depth-6 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/faculty-research-interests/the-wang-laboratory-of-human-environmental-epigenomes/selected-publications" class="sf-depth-6">Selected Publications</a></li></ul></li><li id="main-menu-link-content728d6727-f813-4b52-b953-e4b2133b162b" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/research-and-practice/centers-and-institutes" class="sf-depth-4">Centers and Institutes</a></li></ul></li><li id="main-menu-link-content0080a335-ea5a-41e6-acd8-16a806b92366" class="sf-depth-3 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/people" class="sf-depth-3 menuparent">People</a><ul><li id="main-menu-link-content7d11cf35-f98a-4cd5-a648-4c50f944aad7" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/people/alumni" class="sf-depth-4">Alumni</a></li><li id="main-menu-link-content7d02bd0b-8f68-469b-b5db-98ea0b10211f" class="sf-depth-4 menuparent"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/people/faculty" class="sf-depth-4 menuparent">Faculty</a><ul></ul></li><li id="main-menu-link-contenta449bce0-7d50-4598-ab73-6cbfc42beb1d" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/people/postdoctoral-fellows" class="sf-depth-4">Postdoctoral Fellows</a></li><li id="main-menu-link-contenteaeab59f-5efe-4de7-99fe-14fc7a43f65b" class="sf-depth-4 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/people/staff" class="sf-depth-4">Staff</a></li></ul></li><li id="main-menu-link-content39e7e9fd-d398-465f-a809-a08d3ad14bd3" class="sf-depth-3 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/news-and-events" class="sf-depth-3">News and Events</a></li><li id="main-menu-link-content6b8f32d7-5246-442b-96ca-daec19926dcf" class="sf-depth-3 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/contact" class="sf-depth-3">Contact</a></li><li id="main-menu-link-contente875f0a7-e9f2-4906-a93b-353a1f064231" class="sf-depth-3 sf-no-children"><a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/make-a-gift" class="sf-depth-3">Make a Gift</a></li>
+</ul>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-mainnavigation-2-menu" id="block-mainnavigation-2" class="subnav-static">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-2-menu">Subnav static</h2>
+  
+
+        
+
+
+    
+                          
+    
+<ul class="menu">
+            
+<li class="menu__item">
+                <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/bachelor-of-science-in-environmental-engineering" class="menu__link" data-drupal-link-system-path="node/216301">Bachelor of Science in Environmental Engineering</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/program-objectives-and-outcomes" class="menu__link" data-drupal-link-system-path="node/8056">Program Objectives and Outcomes</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/why-hopkins" class="menu__link" data-drupal-link-system-path="node/8046">Why Hopkins?</a>
+          </li>
+      </ul>
+  
+
+  </nav>
+
+      </div>
+    
+          <div class="breadcrumbs-region">
+        <div id="block-breadcrumbs" class="block">
+  
+    
+      
+
+  <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 class="visually-hidden" id="system-breadcrumb">Breadcrumb</h2>
+    <ol class="breadcrumb">
+          <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="https://publichealth.jhu.edu/">Home</a>
+              </li>
+          <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="https://publichealth.jhu.edu/departments">Departments</a>
+              </li>
+          <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering">Environmental Health and Engineering</a>
+              </li>
+          <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs">Programs</a>
+              </li>
+          <li class="breadcrumb__item">
+                  Undergraduate Programs
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+      </div>
+    
+    
+      <div class="column-main" id="page-content">
+        
+      <div class="field-paragraphs field-items">
+              <div class="field-item">
+
+<div class="text paragraph--text">
+  <div class="text-inner inner">
+    
+
+            <div class="text-long"><h2>Environmental Engineering Program Overview</h2>
+
+<p>Our graduates are prepared to be successful engineering professionals in private and governmental organizations, and/or students in the best graduate programs.&nbsp;We educate students to think critically, communicate clearly and collaborate effectively as they apply the fundamental scientific principles of engineering to environmental problems. We emphasize the importance of intellectual growth, professional ethics and service to society.&nbsp;</p>
+
+<h2>Major</h2>
+
+<p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="08a62b03-87f2-40af-a89b-e8a4cb8374b7" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/bachelor-of-science-in-environmental-engineering" title="Bachelor of Science in Environmental Engineering"><strong>Bachelor of Science in Environmental Engineering</strong></a></p>
+
+<p>Alternative energy sources, population growth, air pollution, urban sprawl, and the depletion of natural resources are among the challenges being addressed by undergraduates in EHE’s Environmental Engineering (BSE) program.​&nbsp;Our quantitative, data-driven approaches to research, cross-disciplinary problem solving and service to society, and our students’ ability to leverage the resources and expertise of multiple university divisions prepare our students for careers in industry and government, as well as for top graduate programs.</p>
+
+<p>The Bachelor of Science in Environmental Engineering (BSE) in the Department of Environmental Health and Engineering, Whiting School of Engineering, Johns Hopkins University is accredited by the Engineering Accreditation Commission of <a href="http://www.abet.org/">ABET</a>. See our <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="f4c6adaa-6f98-4839-a2ce-dd6b24c3abd1" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/program-objectives-and-outcomes" title="Program Objectives and Outcomes">Program Objectives and Outcomes</a> page for more information.</p>
+
+<p><a class="button-white" href="http://https//apply.jhu.edu/application-process/">APPLY</a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="button-white" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="08a62b03-87f2-40af-a89b-e8a4cb8374b7" href="https://publichealth.jhu.edu/departments/environmental-health-and-engineering/programs/undergraduate-programs/bachelor-of-science-in-environmental-engineering" title="Bachelor of Science in Environmental Engineering">LEARN MORE</a></p>
+
+<h2>Combined Degree</h2>
+
+<p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="96bacb49-3156-4b34-bb36-bb5f0f2eff50" href="https://publichealth.jhu.edu/academics/bsemse-five-year-program" title="Bachelor of Science in Engineering/Master of Science in Engineering (BS/MSE) Five-Year Program"><strong>Bachelor of Science in Engineering/Master of Science in Engineering (BSE/MSE) Five-year Program</strong></a></p>
+
+<p>Applicants must be Johns Hopkins University undergraduate students.&nbsp;Undergraduate students&nbsp;should formally apply to the BS/MSE program during their 7th semester and no later than December 1. Admitted students must complete their bachelor's degree before being enrolled in the graduate program.</p>
+
+<p><strong><a class="button-white" href="https://publichealth.jhu.edu/node/9756">LEARN MORE</a></strong></p>
+
+<ul></ul></div>
+      
+  </div>
+</div>
+</div>
+              <div class="field-item">
+<div class="accordion" style="background-color: ;">
+
+  
+
+  <div class="accordion_inner inner ">
+
+    <div class="accordion__text">
+
+      <h2 class="accordion__title">
+        
+            <div>Minors</div>
+      
+      </h2>
+
+      <div class="accordion__description">
+        
+
+            <div class="text-long"><p>The Department of Environmental Health and Engineering offers three minors at the Whiting School of Engineering on the Homewood campus.</p></div>
+      
+      </div>
+
+    </div>
+
+    <div class="accordion__reference-content">
+      
+
+
+                
+
+
+<div class="accordion-component">
+
+  <details class="deque-expander">
+
+    <summary class="deque-expander-summary">
+      
+            <div>Environmental Engineering</div>
+      
+    </summary>
+
+    <div class="deque-expander-content">
+      
+
+            <div class="text-long"><p>Environmental engineers play particularly pivotal roles as professionals who bridge the gap between understanding complex scientific concepts and helping to formulate public policies that affect the environment.&nbsp;Environmental engineering has become an important part of engineering practice in most engineering fields and across a professional spectrum from the private sector through governmental agencies to academia. An undergraduate minor in environmental engineering has been established to enable engineering students to pursue an interest in this field and to incorporate aspects of environmental engineering into their own careers in other engineering disciplines.</p></div>
+      
+    </div>
+
+  </details>
+
+</div>
+
+              
+
+
+<div class="accordion-component">
+
+  <details class="deque-expander">
+
+    <summary class="deque-expander-summary">
+      
+            <div>Engineering for Sustainable Development</div>
+      
+    </summary>
+
+    <div class="deque-expander-content">
+      
+
+            <div class="text-long"><p>Engineers will be increasingly called upon to help devise solutions to the tremendous problems of poverty, inequality, and social and environmental dislocation that afflict major parts of the globe in the 21st century.&nbsp;Working as an engineer in this context involves negotiating highly complex social, economic and political realities and dealing with a wide range of institutions and actors, including national and local governments, multilateral lenders such as the World Bank, diverse non-governmental organizations (NGOs) and local communities. It also increasingly involves working in interdisciplinary teams with social scientists, public health and medical workers, humanitarian aid workers, bankers, politicians and the like. “Sustainable” development implies a development path that is socially equitable, culturally sensitive and environmentally appropriate over a multi-generational time frame.</p>
+
+<p>The Minor in Engineering for Sustainable Development exposes engineering students to some of the key issues related to development, methods of information-gathering in diverse and difficult settings, and working effectively with non-engineers on complex problems. We begin with a one-semester core course that surveys the various issues involved, followed by an individually-designed but coherent program organized around a particular theme, disciplinary approach or region of the world. We conclude with a one-semester seminar in which students come together and share their experiences and insights from their various program trajectories.</p></div>
+      
+    </div>
+
+  </details>
+
+</div>
+
+              
+
+
+<div class="accordion-component">
+
+  <details class="deque-expander">
+
+    <summary class="deque-expander-summary">
+      
+            <div>Environmental Sciences</div>
+      
+    </summary>
+
+    <div class="deque-expander-content">
+      
+
+            <div class="text-long"><p>The Environmental Sciences minor has been developed to encourage and facilitate studies in environmental sciences by students completing degrees in the other science and engineering disciplines.&nbsp;For more information about this minor, please visit our&nbsp;advising page.</p>
+
+<p>As part of these minor programs, or as part of other programs of the student’s own design, the department offers electives in such areas as:</p>
+
+<ul><li>ecology</li>
+	<li>geomorphology</li>
+	<li>water and wastewater pollution treatment processes</li>
+	<li>environmental systems analysis</li>
+	<li>environmental policy studies</li>
+</ul></div>
+      
+    </div>
+
+  </details>
+
+</div>
+
+        
+    </div>
+
+  </div>
+
+</div>
+</div>
+              <div class="field-item">
+<div class="articles-list" style="background-color: ;">
+
+  
+
+  <div class="articles_list_inner inner ">
+
+    <div class="articles-list__text">
+
+      <h2 class="articles-list__title">
+        
+      </h2>
+
+      <div class="articles-list__description">
+        
+      </div>
+
+    </div>
+
+          <div class="articles-list__content">
+        
+
+
+                
+
+
+<article role="article" class="node node--type-article node--promoted node--view-mode-card card">
+
+      <div class="card-image">
+      
+
+            <div class="field field-image field-item">
+<article>
+  
+  
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--block-4 blazy--view blazy--view--headline-articles blazy--view--headline-articles--block-4">
+
+
+
+                  <div class="media media--blazy media--bundle--image media--loading is-b-loading media--image"><img alt="students discussing project in a snowy patch of ground" title="DD-22-Olin-Hall" class="media__image media__element b-lazy" data-src="/sites/default/files/styles/card_image/public/2022-07/olin-hall-3-1.jpg?h=cef87a2f&amp;itok=1GpTTmK-" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20388%20344&#39;%2F%3E" width="388" height="344" loading="lazy">
+        </div>
+        
+  
+</div>
+      
+    
+  </article>
+</div>
+      
+    </div>
+  
+  <div class="card-text">
+    <h3 class="card-title">
+                
+<a href="https://publichealth.jhu.edu/2022/design-day-team-transforming-corner-of-homewood-campus-into-immersive-living-classroom">
+      
+
+            Design Day Team Transforming Corner of Homewood Campus Into Immersive Living Classroom 
+      
+  </a>
+          </h3>
+
+    
+  </div>
+
+</article>
+
+              
+
+
+<article role="article" class="node node--type-article node--promoted node--view-mode-card card">
+
+      <div class="card-image">
+      
+
+            <div class="field field-image field-item">
+<article>
+  
+  
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--block-4 blazy--view blazy--view--headline-articles blazy--view--headline-articles--block-4">
+
+
+
+                  <div class="media media--blazy media--bundle--image media--loading is-b-loading media--image"><img alt="Alexander Holt, Zachary Ellis, Amanda Hinton, Marissela Gomez, and Chloe Frantz stand on rocks in Stony Run Creek." title="DD-Stony-Run-1" class="media__image media__element b-lazy" data-src="/sites/default/files/styles/card_image/public/2022-04/dsc0069.JPG?h=73f8af3d&amp;itok=SWUgp8QW" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20388%20344&#39;%2F%3E" width="388" height="344" loading="lazy">
+        </div>
+        
+  
+</div>
+      
+    
+  </article>
+</div>
+      
+    </div>
+  
+  <div class="card-text">
+    <h3 class="card-title">
+                
+<a href="https://publichealth.jhu.edu/2022/design-day-team-to-help-alleviate-flooding-on-local-trail">
+      
+
+            Design Day team to help alleviate flooding on local trail
+      
+  </a>
+          </h3>
+
+    
+  </div>
+
+</article>
+
+              
+
+
+<article role="article" class="node node--type-article node--promoted node--view-mode-card card">
+
+      <div class="card-image">
+      
+
+            <div class="field field-image field-item">
+<article>
+  
+  
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--block-4 blazy--view blazy--view--headline-articles blazy--view--headline-articles--block-4">
+
+
+
+                  <div class="media media--blazy media--bundle--image media--loading is-b-loading media--image"><img alt="group of students in hard hats and masks in front of water treatment facility" title="PhosFATE-team-2022" class="media__image media__element b-lazy" data-src="/sites/default/files/styles/card_image/public/2022-04/image003.jpg?h=71976bb4&amp;itok=MlODxcrk" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20388%20344&#39;%2F%3E" width="388" height="344" loading="lazy">
+        </div>
+        
+  
+</div>
+      
+    
+  </article>
+</div>
+      
+    </div>
+  
+  <div class="card-text">
+    <h3 class="card-title">
+                
+<a href="https://publichealth.jhu.edu/2022/design-day-team-helping-a-water-utility-produce-clean-energy-and-fertilizer">
+      
+
+            Design Day team helping a water utility produce clean energy and fertilizer
+      
+  </a>
+          </h3>
+
+    
+  </div>
+
+</article>
+
+        
+      </div>
+    
+    
+  </div>
+
+</div>
+</div>
+              <div class="field-item">
+<div class="fiftyfifty-contained" style="background-color: #286140;">
+
+  
+
+  <div class="fiftyfifty_contained_inner inner text-light">
+
+    
+    
+    <div class="fiftyfifty-contained_columns">
+
+      <div class="fiftyfifty-contained__column-left">
+        
+            <div>
+<div class="content-component">
+
+  
+      <h2 class="content-component__title">
+      
+            <div>Meet an EHE Professor</div>
+      
+    </h2>
+  
+  <div class="content-component__description">
+    
+
+            <div class="text-long"><p>Johns Hopkins Bloomberg Distinguished Professor Paul Ferraro centers his research in the Whiting School of Engineering and Carey Business School.</p></div>
+      
+  </div>
+
+  
+</div>
+</div>
+      
+      </div>
+
+      <div class="fiftyfifty-contained__column-right">
+        
+            <div>
+
+<div class="video">
+  
+
+
+            <article>
+  
+      
+
+            <div class="field field-media-video-embed-field field-item"><iframe src="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/oembed.html" frameborder="0" allowtransparency="" width="854" height="480" class="media-oembed-content" title="Johns Hopkins Bloomberg Distinguished Professor Paul Ferraro"></iframe>
+</div>
+      
+  </article>
+
+      
+</div>
+</div>
+      
+      </div>
+
+    </div>
+
+    
+  </div>
+
+</div>
+</div>
+              <div class="field-item">
+<div class="single-column" style="background-color: ;">
+
+  
+
+  <div class="single_column_inner inner ">
+
+    <div class="single-column__text">
+
+              <h2 class="single-column__title">
+          
+            <div>Contact Us</div>
+      
+        </h2>
+      
+              <div class="single-column__description">
+          
+
+            <div class="text-long"><p>Questions about the program? We're happy to help.</p>
+
+<p><strong>Senior Academic Program Coordinator</strong><br>
+Natalie Van Horn&nbsp;<br><a href="mailto:nvanhor2@jhu.edu">nvanhor2@jhu.edu</a></p></div>
+      
+        </div>
+      
+
+      
+    </div>
+
+  </div>
+
+</div>
+</div>
+          </div>
+  
+      </div>
+
+    
+
+  </div>
+
+</article>
+
+  </div>
+
+
+      </main>
+  </div>
+  
+    <footer class="footer">
+      <div class="footer-inner">
+
+        <div class="footer-columns">
+
+                      <div class="footer-column column-first">
+              
+  <nav role="navigation" aria-labelledby="block-footerehesocial-menu" id="block-footerehesocial" class="footer-social">
+            
+  <h2 class="visually-hidden" id="block-footerehesocial-menu">Footer EHE Social</h2>
+  
+
+        <div class="hr"></div>
+
+
+
+    
+                          
+    
+<ul class="menu">
+            
+<li class="menu__item">
+                <a href="https://www.facebook.com/Hopkins.EHE" class="link-facebook menu__link">Facebook</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://twitter.com/JohnsHopkinsEHE" class="link-twitter menu__link">Twitter</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://www.youtube.com/channel/UCcM2WT2eSM9Rzcd9VuLeUwA" class="link-youtube menu__link">Youtube</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://www.instagram.com/johnshopkinsehe/" class="link-instagram menu__link">Instagram</a>
+          </li>
+      </ul>
+  
+<div class="hr"></div>
+
+  </nav>
+
+
+            </div>
+          
+                      <div class="footer-column column-second">
+              
+  <div id="block-ehefootercontact" class="block">
+  
+    
+      
+
+            <div class="text-long"><p><strong>East Baltimore Campus</strong></p>
+
+<p>Bloomberg School of Public Health<br>
+615 N. Wolfe Street, Room E7527,&nbsp; Baltimore, MD 21205</p>
+
+<p>Contact the Bloomberg School<br>
+410-614-3725</p></div>
+      
+  </div>
+
+
+            </div>
+          
+                      <div class="footer-column column-third">
+              
+  <div id="block-ehefooterhomewoodcontact" class="block">
+  
+    
+      
+
+            <div class="text-long"><p><strong>Homewood Campus</strong></p>
+
+<p>Whiting School of Engineering<br>
+3400 N. Charles Street, Baltimore, MD 21218</p>
+
+<p>Contact the Whiting School<br>
+410-516-4050</p></div>
+      
+  </div>
+
+
+            </div>
+                  </div>
+
+        <div class="footer-bottom">
+                      
+  <div id="block-footerlogo" class="block footer-logo">
+  
+    
+      
+
+            <div class="text-long"><p><a href="https://www.jhu.edu/"><span>Johns Hopkins University</span> </a></p></div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-footerehemenuextra-menu" id="block-footerehemenuextra" class="footer-menu-extra">
+            
+  <h2 class="visually-hidden" id="block-footerehemenuextra-menu">Footer EHE menu extra</h2>
+  
+
+        
+
+
+    
+                          
+    
+<ul class="menu">
+            
+<li class="menu__item">
+                <a href="https://publichealth.jhu.edu/web-policies" class="menu__link" data-drupal-link-system-path="node/2466">Web Policies</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://accessibility.jhu.edu/" class="menu__link">Accessibility</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://webhelp.jhsph.edu/support/tickets/new" class="menu__link">Website Help</a>
+          </li>
+          
+<li class="menu__item">
+                <a href="https://my.jh.edu/myJH/" class="menu__link">My.JH</a>
+          </li>
+      </ul>
+  
+
+  </nav>
+
+
+                  </div>
+
+      </div>
+    </footer>
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/8011","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"data":{"extlink":{"extTarget":true,"extTargetNoOverride":true,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":".header-ehe, .site-header, .social-links","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":null,"container":""},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show"},"speed":"fast","autoArrows":false,"dropShadows":false},"plugins":{"smallscreen":{"mode":"always_active","accordionButton":"2","title":"In this section"},"supposition":true,"supersubs":true}}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience.\u003C\/h2\u003E\u003Cp\u003EBy clicking the Accept button, you agree to us doing so.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ELearn more\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ELearn more\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/web-policies","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience.\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"containing_element":"body","settings_tab_enabled":false},"user":{"uid":0,"permissionsHash":"a7ba49f6c5887df23dbd465321ba3bb5aa6419e5f26877d5324c94d40e762abd"}}</script>
+<script src="./Undergraduate Programs _ Johns Hopkins _ Bloomberg School of Public Health_files/js_JFtTcb4Oz_r5ER3O6I0X7nXNZ25HmU8DeCeJk5d98rI.js.download"></script></body></html>
